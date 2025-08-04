@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 """
 Aplicación Web de Análisis de Pérdidas Eléctricas - Matanzas
 """
@@ -68,3 +69,24 @@ if __name__ == "__main__":
 
     # Ejecutar la aplicación Flet para WEB
     ft.app(target=main, view=ft.AppView.WEB_BROWSER, port=8080)
+=======
+from kivymd.app import MDApp
+from kivy.lang import Builder
+
+class SampleApp(MDApp):
+    
+    def build(self):
+        self.appKv='''
+MDScreen:
+    MDLabel:
+        text:'Hello,World.'
+        multiline:True
+        color:"blue"
+        halign:'center'         
+'''
+        AppScreen=Builder.load_string(self.appKv)
+        return AppScreen
+
+SampleApp().run()
+    
+>>>>>>> f5d76e8e2acf7f4852cbdd6b1e756896f07bd5a8
